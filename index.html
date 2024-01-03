@@ -11,9 +11,47 @@
     content="田同学的个人网站首页。我是一个独立的前端开发者，现在在杭州工作，我开发了自己的基于 vue3 的组件库 Fighting Design 和一些其它的开源项目等等，你可以通过下方有各种链接来了解我" />
   <mate name="author" content="https://github.com/Tyh2001" />
   <title>田同学 | Tyh2001</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fighting-design/dist/index.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #app {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
 </head>
 
 <body>
+  <div id="app">
+    <f-avatar src="https://avatars.githubusercontent.com/u/73180970?v=4" round :size="100"></f-avatar>
+    <f-text size="20px" bold block>Hi~ I'm Tian Yuhao.</f-text>
+    <f-text block>I hope to participate in some remote open source work.</f-text>
+    <f-text block>I hope to have the opportunity to meet <f-link href="https://twitter.com/elonmusk" type="primary">Elon
+        Musk</f-link></f-text>
+    <f-text block>I hope to have my own <f-link href="https://www.tesla.com/" type="primary">Tesla</f-link> in the
+      future</f-text>
+    <f-text block>My girl： <f-link href="https://github.com/Fightingweiwei" type="primary">Fighting 维~</f-link></f-text>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.global.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fighting-design/dist/index.umd.js"></script>
+  <script>
+    const { createApp, ref } = Vue
+
+    const app = createApp({
+      setup () { }
+    })
+
+    app.use(FightingDesign.default)
+    app.mount('#app')
+  </script>
 </body>
 
 </html>
