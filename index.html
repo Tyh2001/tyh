@@ -1,8 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
+<!-- 
+    <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="icon" href="https://avatars.githubusercontent.com/u/73180970?v=4" />
   <meta name="Keywords"
@@ -12,46 +9,45 @@
   <mate name="author" content="https://github.com/Tyh2001" />
   <title>田同学 | Tyh2001</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fighting-design/dist/index.css" />
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-    }
+ -->
 
-    #app {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      width: 100vw;
-      height: 100vh;
-    }
-  </style>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles/index.css">
 </head>
 
 <body>
-  <div id="app">
-    <f-avatar src="https://avatars.githubusercontent.com/u/73180970?v=4" round :size="100"></f-avatar>
-    <f-text size="20px" bold block>Hi~ I'm Tian Yuhao.</f-text>
-    <f-text block>I hope to participate in some remote open source work.</f-text>
-    <f-text block>I hope to have the opportunity to meet <f-link href="https://twitter.com/elonmusk" type="primary">Elon
-        Musk</f-link></f-text>
-    <f-text block>I hope to have my own <f-link href="https://www.tesla.com/" type="primary">Tesla</f-link> in the
-      future</f-text>
-    <f-text block>My girl： <f-link href="https://github.com/Fightingweiwei" type="primary">Fighting 维~</f-link></f-text>
-  </div>
+  <main class="main">
+    <!-- 菜单栏 -->
+    <nav class="nav">
+      <img class="nav-avatar" src="https://avatars.githubusercontent.com/u/73180970?v=4" alt="" />
+      <div class="nav-liet">
+        <div class="nav-item">About</div>
+        <div class="nav-item">Resume</div>
+        <div class="nav-item">Blog</div>
+        <div class="nav-item">Juejin</div>
+      </div>
+    </nav>
 
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.global.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/fighting-design/dist/index.umd.js"></script>
-  <script>
-    const { createApp, ref } = Vue
+    <h1 class="title">Hi, I’m YuHao Tian</h1>
+    <p class="text">I am a developer,Located in Hangzhou. I am good at using Vue, React, Nest.</p>
+    <p class="text">I hope to participate in some remote open source work.</p>
+    <p class="text">I hope to have the opportunity to meet Elon Musk.</p>
+    <p class="text">I hope to have my own Tesla in the future.</p>
 
-    const app = createApp({
-      setup () { }
-    })
-
-    app.use(FightingDesign.default)
-    app.mount('#app')
-  </script>
+    <!-- 雇用我 -->
+    <div class="link-list">
+      <div class="link-button">Hire me!</div>
+      <div class="link-button">Blog</div>
+      <div class="link-button">Github</div>
+      <div class="link-button">𝕏</div>
+    </div>
+  </main>
 </body>
 
 </html>
