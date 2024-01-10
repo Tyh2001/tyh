@@ -10,7 +10,6 @@ html {
   display: flex;
   justify-content: center;
   padding-bottom: 200px;
-  overflow-y: auto;
   overflow-x: hidden;
 }
 
