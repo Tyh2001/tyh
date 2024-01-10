@@ -21,16 +21,20 @@ html {
 .title {
   font-weight: 700;
   font-size: 2.6666667em;
-  color: rgb(17, 24, 39);
+  color: #141e34;
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .text {
-  color: rgb(55, 65, 81);
+  color: #374151;
   font-size: 18px;
   line-height: 1.7777778;
-  margin: 22px 0;
+  margin: 26px 0;
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.text a {
+  color: #2d5af1;
 }
 
 .link-list {
@@ -38,17 +42,11 @@ html {
   width: 100%;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+  margin-top: 40px;
 }
 
-.link-button {
-  padding: 16px 20px;
-  box-sizing: border-box;
-  background-color: #eef;
-  border-radius: 10px;
-  font-size: 22px;
-  font-weight: bold;
-  color: #111;
-  cursor: pointer;
+.link-list a {
+  text-decoration: none;
 }
 
 .nav {
@@ -57,13 +55,6 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.nav-item {
-  color: #111;
-  height: 100%;
-  cursor: pointer;
-  list-style: none;
 }
 
 .nav-avatar {
@@ -79,12 +70,52 @@ html {
   column-gap: 40px;
 }
 
+.nav-item {
+  color: #111;
+  height: 100%;
+  cursor: pointer;
+  list-style: none;
+}
+
 .nav-item a {
   color: #111;
   color: #333;
   text-decoration: none;
+  font-family: PingFangSC, PingFang SC;
+  transition: .3s;
 }
 
 .nav-item a:hover {
   text-decoration: underline;
+  color: #2d5af1;
+}
+
+.link-button {
+  padding: 24px 20px;
+  box-sizing: border-box;
+  background-color: #f5f7fa;
+  border-radius: 10px;
+  font-size: 21px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  user-select: none;
+  transition: opacity .3s;
+  opacity: 1;
+}
+
+.link-button:hover {
+  opacity: .7;
+}
+
+.link-button-title {
+  font-size: 17px;
+  margin-left: 10px;
+  color: #454545;
+  font-family: PingFangSC, PingFang SC;
+}
+
+.link-button svg {
+  font-size: 20px;
+  color: #454545;
 }
