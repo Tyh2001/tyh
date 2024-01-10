@@ -103,12 +103,20 @@ html {
   display: flex;
   align-items: center;
   user-select: none;
-  transition: opacity .3s;
-  opacity: 1;
+  transition: background .4s;
 }
 
 .link-button:hover {
-  opacity: .7;
+  background: #2d5af1;
+}
+
+.link-button:hover .link-button-title,
+.link-button:hover svg {
+  color: #fff;
+}
+
+.link-button:active {
+  background: #0f3edc;
 }
 
 .link-button-title {
@@ -116,9 +124,11 @@ html {
   margin-left: 10px;
   color: #454545;
   font-family: PingFangSC, PingFang SC;
+  transition: color .4s;
 }
 
 .link-button svg {
   font-size: 20px;
   color: #454545;
+  transition: color .4s;
 }
