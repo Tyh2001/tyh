@@ -12,8 +12,10 @@ html {
 }
 
 .main {
-  max-width: 606px;
+  max-width: 666px;
   width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .title {
@@ -61,6 +63,7 @@ html {
   color: #111;
   height: 100%;
   cursor: pointer;
+  list-style: none;
 }
 
 .nav-avatar {
@@ -70,8 +73,18 @@ html {
   cursor: pointer;
 }
 
-.nav-liet {
+.nav-list {
   display: flex;
   align-items: center;
   column-gap: 40px;
+}
+
+.nav-item a {
+  color: #111;
+  color: #333;
+  text-decoration: none;
+}
+
+.nav-item a:hover {
+  text-decoration: underline;
 }
