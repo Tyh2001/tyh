@@ -80,7 +80,6 @@ html {
 }
 
 .nav-item a {
-  color: #111;
   color: #333;
   text-decoration: none;
   font-family: PingFangSC, PingFang SC;
@@ -130,4 +129,14 @@ html {
   font-size: 20px;
   color: #454545;
   transition: color .4s;
+}
+
+.footer {
+  margin-top: 200px;
+  text-align: center;
+
+}
+
+.footer a {
+  color: #454545;
 }
