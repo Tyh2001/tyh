@@ -87,6 +87,7 @@
     });
 
     content.addEventListener('touchmove', (e) => {
+      e.preventDefault()
       let moveY = e.touches[0].pageY;
       if (moveY - startY > 50) {
         refresh.classList.add('show');
