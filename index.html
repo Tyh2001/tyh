@@ -33,6 +33,7 @@
       top: 0;
       right: 0;
       left: 0;
+      transition: .3s;
       bottom: 0;
     }
   </style>
@@ -40,7 +41,7 @@
 
 <body>
   <div class="a"></div>
-  <div class="b">
+  <div class="b" id="content">
     <h1>2</h1>
     <h1>2</h1>
     <h1>2</h1>
@@ -79,6 +80,33 @@
         e.preventDefault()
       });
     })
+
+    let startY;
+    let isPullingDown = false;
+    // const refresh = document.getElementById('refresh');
+    const content = document.getElementById('content');
+
+    content.addEventListener('touchstart', (e) => {
+      if (window.scrollY === 0) {
+        startY = e.touches[0].pageY;
+        isPullingDown = true;
+      }
+    });
+
+    content.addEventListener('touchmove', (e) => {
+      if (isPullingDown) {
+        let moveY = e.touches[0].pageY;
+        if (moveY - startY > 50) {
+          e.preventDefault();
+          content.style.transform = 'translateY(150px)';
+        }
+      }
+    });
+
+    content.addEventListener('touchend', () => {
+      content.style.transform = 'translateY(0)';
+      isPullingDown = false;
+    });
   </script>
 </body>
 
