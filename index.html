@@ -6,11 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>下拉刷新效果</title>
   <style>
-    body,
-    html {
+    * {
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
     }
 
     .content {
@@ -37,43 +35,56 @@
     .refresh.show {
       top: 0;
     }
+
+    .wrapper {
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      overflow-y: auto;
+    }
   </style>
 </head>
 
 <body>
 
-  <div class="refresh" id="refresh">这是一段文案</div>
-  <div class="content" id="content">
-    <p>这是页面的内容区域。</p>
-    <p>可以在这里添加更多内容。</p>
-    <p>下拉页面顶部以触发刷新效果。</p>
-    <p>下拉页面顶部以触发刷新效果。</p>
-    <p>下拉页面顶部以触发刷新效果。</p>
-    <p>下拉页面顶部以触发刷新效果。</p>
-    <p>下拉页面顶部以触发刷新效果。</p>
-    <p>下拉页面顶部以触发刷新效果。</p>
-    <p>下拉页面顶部以触发刷新效果。</p>
-    <h1>11</h1>
-    <h1>11</h1>
-    <h1>11</h1>
-    <h1>11</h1>
-    <h1>11</h1>
-    <h1>11</h1>
-    <h1>11</h1>
-    <h1>11</h1>
-    <h1>11</h1>
-    <h1>11</h1>
-    <h1>11</h1>
-    <h1>11</h1>
-    <h1>11</h1>
-    <h1>11</h1>
-    <h1>11</h1>
-    <h1>11</h1>
-    <h1>11</h1>
-    <h1>11</h1>
-    <h1>11</h1>
-    <h1>11</h1>
-    <p>下拉页面顶部以触发刷新效果。</p>
+  <div class="wrapper">
+    <div class="refresh" id="refresh">这是一段文案</div>
+    <div class="content" id="content">
+      <p>这是页面的内容区域。</p>
+      <p>可以在这里添加更多内容。</p>
+      <p>下拉页面顶部以触发刷新效果。</p>
+      <p>下拉页面顶部以触发刷新效果。</p>
+      <p>下拉页面顶部以触发刷新效果。</p>
+      <p>下拉页面顶部以触发刷新效果。</p>
+      <p>下拉页面顶部以触发刷新效果。</p>
+      <p>下拉页面顶部以触发刷新效果。</p>
+      <p>下拉页面顶部以触发刷新效果。</p>
+      <h1>11</h1>
+      <h1>11</h1>
+      <h1>11</h1>
+      <h1>11</h1>
+      <h1>11</h1>
+      <h1>11</h1>
+      <h1>11</h1>
+      <h1>11</h1>
+      <h1>11</h1>
+      <h1>11</h1>
+      <h1>11</h1>
+      <h1>11</h1>
+      <h1>11</h1>
+      <h1>11</h1>
+      <h1>11</h1>
+      <h1>11</h1>
+      <h1>11</h1>
+      <h1>11</h1>
+      <h1>11</h1>
+      <h1>11</h1>
+      <p>下拉页面顶部以触发刷新效果。</p>
+    </div>
   </div>
 
   <script>
@@ -81,15 +92,22 @@
     let isPullingDown = false;
     const refresh = document.getElementById('refresh');
     const content = document.getElementById('content');
+    const wrapper = document.querySelector('.wrapper');
 
-    window.addEventListener('touchstart', (e) => {
-      if (window.scrollY === 0) {
+    document.body.addEventListener('load', () => {
+      document.body.addEventListener('touchstart', (e) => {
+        e.preventDefault()
+      });
+    })
+
+    wrapper.addEventListener('touchstart', (e) => {
+      if (wrapper.scrollY === 0) {
         startY = e.touches[0].pageY;
         isPullingDown = true;
       }
     });
 
-    window.addEventListener('touchmove', (e) => {
+    wrapper.addEventListener('touchmove', (e) => {
       if (isPullingDown) {
         let moveY = e.touches[0].pageY;
         if (moveY - startY > 50) {
@@ -100,7 +118,7 @@
       }
     });
 
-    window.addEventListener('touchend', () => {
+    wrapper.addEventListener('touchend', () => {
       if (refresh.classList.contains('show')) {
         // setTimeout(() => {
         refresh.classList.remove('show');
