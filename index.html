@@ -4,75 +4,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-
+  <title>下拉刷新效果</title>
   <style>
-    * {
-      padding: 0;
+    body,
+    html {
       margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
     }
 
-    .a {
+    .content {
+      padding: 20px;
+      transition: transform 0.3s;
+    }
+
+    .refresh {
+      position: absolute;
+      top: -150px;
+      left: 0;
+      width: 100%;
       height: 150px;
-      width: 100vw;
       background-color: blue;
-      z-index: 10;
-      position: fixed;
-      top: -150px; /* Initially hidden above the viewport */
-      right: 0;
-      left: 0;
+      color: white;
+      text-align: center;
+      line-height: 50px;
       transition: top 0.3s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    .b {
-      height: 100vh;
-      width: 100vw;
-      overflow-y: auto;
-      background-color: skyblue;
-      z-index: 20;
-      position: fixed;
+    .refresh.show {
       top: 0;
-      right: 0;
-      left: 0;
-      bottom: 0;
     }
   </style>
 </head>
 
 <body>
-  <div class="a" id="refresh">Refreshing...</div>
-  <div class="b" id="content">
-    <h1>222</h1>
-    <h1>2</h1>
-    <h1>2</h1>
-    <h1>2</h1>
-    <h1>2</h1>
-    <h1>2</h1>
-    <h1>2</h1>
-    <h1>2</h1>
-    <h1>2</h1>
-    <h1>2</h1>
-    <h1>2</h1>
-    <h1>2</h1>
-    <h1>2</h1>
-    <h1>2</h1>
-    <h1>2</h1>
-    <h1>2</h1>
-    <h1>2</h1>
-    <h1>2</h1>
-    <h1>2</h1>
-    <h1>2</h1>
-    <h1>2</h1>
-    <h1>2</h1>
-    <h1>2</h1>
-    <h1>2</h1>
-    <h1>2</h1>
-    <h1>2</h1>
-    <h1>2</h1>
-    <h1>2</h1>
-    <h1>2</h1>
-    <h1>2</h1>
-    <h1>2</h1>
+
+  <div class="refresh" id="refresh">这是一段文案</div>
+  <div class="content" id="content">
+    <p>这是页面的内容区域。</p>
+    <p>可以在这里添加更多内容。</p>
+    <p>下拉页面顶部以触发刷新效果。</p>
+    <p>下拉页面顶部以触发刷新效果。</p>
+    <p>下拉页面顶部以触发刷新效果。</p>
+    <p>下拉页面顶部以触发刷新效果。</p>
+    <p>下拉页面顶部以触发刷新效果。</p>
+    <p>下拉页面顶部以触发刷新效果。</p>
+    <p>下拉页面顶部以触发刷新效果。</p>
+    <h1>11</h1>
+    <h1>11</h1>
+    <h1>11</h1>
+    <h1>11</h1>
+    <h1>11</h1>
+    <h1>11</h1>
+    <h1>11</h1>
+    <h1>11</h1>
+    <h1>11</h1>
+    <h1>11</h1>
+    <h1>11</h1>
+    <h1>11</h1>
+    <h1>11</h1>
+    <h1>11</h1>
+    <h1>11</h1>
+    <h1>11</h1>
+    <h1>11</h1>
+    <h1>11</h1>
+    <h1>11</h1>
+    <h1>11</h1>
+    <p>下拉页面顶部以触发刷新效果。</p>
   </div>
 
   <script>
@@ -81,34 +82,36 @@
     const refresh = document.getElementById('refresh');
     const content = document.getElementById('content');
 
-    content.addEventListener('touchstart', (e) => {
+    window.addEventListener('touchstart', (e) => {
       if (window.scrollY === 0) {
         startY = e.touches[0].pageY;
         isPullingDown = true;
       }
     });
 
-    content.addEventListener('touchmove', (e) => {
+    window.addEventListener('touchmove', (e) => {
       if (isPullingDown) {
         let moveY = e.touches[0].pageY;
         if (moveY - startY > 50) {
-          refresh.style.top = '0'; // Show the refresh element
-        } else {
-          refresh.style.top = '-150px'; // Hide the refresh element if the threshold is not met
+          e.preventDefault();
+          refresh.classList.add('show');
+          content.style.transform = 'translateY(150px)';
         }
       }
     });
 
-    content.addEventListener('touchend', () => {
-      refresh.style.top = '-150px'; // Hide the refresh element
-      isPullingDown = false;
-    });
-
-    // Allow normal scrolling behavior
-    content.addEventListener('scroll', () => {
+    window.addEventListener('touchend', () => {
+      if (refresh.classList.contains('show')) {
+        // setTimeout(() => {
+        refresh.classList.remove('show');
+        content.style.transform = 'translateY(0)';
+        // 可以在这里添加刷新内容的逻辑
+        // }, 1000);
+      }
       isPullingDown = false;
     });
   </script>
+
 </body>
 
 </html>
