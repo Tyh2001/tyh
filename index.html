@@ -1,17 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>下拉刷新效果</title>
+  <meta charset="utf-8" />
+  <title></title>
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="stylesheet" href="/assets/css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/css/css.css" />
+  <script type="text/javascript" src="/assets/js/jquery-2.1.4.js"></script>
+  <script type="text/javascript" src="/assets/js/rem.js"></script>
   <style>
+    body {
+      overflow: hidden;
+    }
+
     * {
       margin: 0;
       padding: 0;
     }
 
-    .content {
+    .content2 {
       padding: 20px;
       transition: transform 0.3s;
     }
@@ -56,108 +66,85 @@
       color: #fff;
       background-color: red;
     }
-
-    .box {
-      background-color: pink;
-      width: 50vw;
-    }
   </style>
 </head>
 
 <body>
+  <div></div>
 
   <div class="wrapper">
     <div class="refresh" id="refresh">这是一段文案</div>
-    <div class="content" id="content">
-      <div class="box">
-        <p>这是页面的内容区域。</p>
-        <p>可以在这里添加更多内容。</p>
-        <p>下拉页面顶部以触发刷新效果。</p>
-        <p>下拉页面顶部以触发刷新效果。</p>
-        <p>下拉页面顶部以触发刷新效果。</p>
-        <p>下拉页面顶部以触发刷新效果。</p>
-        <p>下拉页面顶部以触发刷新效果。</p>
-        <p>下拉页面顶部以触发刷新效果。</p>
-        <p>下拉页面顶部以触发刷新效果。</p>
-        <p>下拉页面顶部以触发刷新效果。</p>
-        <p>下拉页面顶部以触发刷新效果。</p>
-        <p>下拉页面顶部以触发刷新效果。</p>
-        <p>下拉页面顶部以触发刷新效果。</p>
-        <p>下拉页面顶部以触发刷新效果。</p>
-        <p>下拉页面顶部以触发刷新效果。</p>
-        <p>下拉页面顶部以触发刷新效果。</p>
-        <p>下拉页面顶部以触发刷新效果。</p>
-        <p>下拉页面顶部以触发刷新效果。</p>
-        <p>下拉页面顶部以触发刷新效果。</p>
-        <p>下拉页面顶部以触发刷新效果。</p>
-        <p>下拉页面顶部以触发刷新效果。</p>
-        <p>下拉页面顶部以触发刷新效果。</p>
-        <p>下拉页面顶部以触发刷新效果。</p>
-        <p>下拉页面顶部以触发刷新效果。</p>
-        <p>下拉页面顶部以触发刷新效果。</p>
-        <p>下拉页面顶部以触发刷新效果。</p>
-        <h1>11</h1>
-        <h1>11</h1>
-        <h1>11</h1>
-        <h1>11</h1>
-        <h1>11</h1>
-        <h1>11</h1>
-        <h1>11</h1>
-        <h1>11</h1>
-        <h1>11</h1>
-        <h1>11</h1>
-        <h1>11</h1>
-        <p>下拉页面顶部以触发刷新效果。</p>
-      </div>
 
+    <div class="contents content2" id="content">
+      <img style="width: 100%;" src="https://htx.d3v3h3.com/assets/images/41.png" />
+      <h1>1</h1>
+      <h1>1</h1>
+      <h1>1</h1>
+      <h1>1</h1>
+      <h1>1</h1>
+      <h1>1</h1>
+      <h1>1</h1>
+      <h1>1</h1>
+      <h1>1</h1>
+      <h1>1</h1>
+      <!--<div><a href="#">企业服务</a></div>-->
     </div>
-  </div>
-  <div class="bar">这是导航条</div>
-
-  <script>
-    let startY;
-    let isPullingDown = false;
-    const refresh = document.getElementById('refresh');
-    const content = document.getElementById('content');
-    const wrapper = document.querySelector('.wrapper');
-
-    wrapper.addEventListener('touchstart', (e) => {
-      console.log('touchstart event on wrapper', e);
-      if (wrapper.scrollTop === 0) {
-        startY = e.touches[0].pageY;
-        isPullingDown = true;
-      }
-    }, { passive: false });
-
-    wrapper.addEventListener('touchmove', (e) => {
-      console.log('touchmove event on wrapper', e);
-      if (isPullingDown) {
-        let moveY = e.touches[0].pageY;
-        if (moveY - startY > 50) {
-          e.preventDefault();
-          refresh.classList.add('show');
-          content.style.transform = 'translateY(150px)';
-        }
-      }
-    }, { passive: false });
-
-    wrapper.addEventListener('touchend', (e) => {
-      console.log('touchend event on wrapper', e);
-      if (refresh.classList.contains('show')) {
-        refresh.classList.remove('show');
-        content.style.transform = 'translateY(0)';
-        // 可以在这里添加刷新内容的逻辑
-      }
-      isPullingDown = false;
-    }, { passive: false });
-
-    // For debugging purposes
-    window.addEventListener('touchstart', (e) => {
-      console.log('touchstart event on window', e);
-      // e.preventDefault()
-    }, { passive: false });
-  </script>
-
 </body>
+<script type="text/javascript" src="/assets/js/joyCode.js"></script>
+<script type="text/javascript" src="/assets/js/common.js"></script>
+<script>
+  function jump() {
+    //  alert(999)
+    location.href = "/index/index/pro";
+  }
+
+  window.addEventListener('touchstart', (e) => {
+    console.log('touchstart event on window', e);
+    // e.preventDefault()
+  }, { passive: false });
+  // 初始化触摸起始位置变量
+  let startY;
+  let isPullingDown = false;
+  const refresh = document.getElementById('refresh');
+  const content = document.getElementById('content');
+  const wrapper = document.querySelector('.wrapper');
+
+  wrapper.addEventListener('touchstart', (e) => {
+    console.log('touchstart event on wrapper', e);
+    if (wrapper.scrollTop === 0) {
+      startY = e.touches[0].pageY;
+      isPullingDown = true;
+    }
+  }, { passive: false });
+
+
+  wrapper.addEventListener('touchmove', (e) => {
+    console.log('touchmove event on wrapper', e);
+    if (isPullingDown) {
+      let moveY = e.touches[0].pageY;
+      if (moveY - startY > 50) {
+        e.preventDefault();
+        refresh.classList.add('show');
+        content.style.transform = 'translateY(150px)';
+      }
+    }
+  }, { passive: false });
+
+  wrapper.addEventListener('touchend', (e) => {
+    console.log('touchend event on wrapper', e);
+    if (refresh.classList.contains('show')) {
+      refresh.classList.remove('show');
+      content.style.transform = 'translateY(0)';
+      // 可以在这里添加刷新内容的逻辑
+    }
+    isPullingDown = false;
+  }, { passive: false });
+
+  // For debugging purposes
+  window.addEventListener('touchstart', (e) => {
+    console.log('touchstart event on window', e);
+    // e.preventDefault()
+  }, { passive: false });
+</script>
 
 </html>
