@@ -74,9 +74,11 @@
   </div>
 
   <script>
-    document.body.addEventListener('touchstart', (e) => {
-      e.preventDefault()
-    });
+    document.addEventListener('load', () => {
+      document.body.addEventListener('touchstart', (e) => {
+        e.preventDefault()
+      });
+    })
   </script>
 </body>
 
