@@ -3,126 +3,126 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="Keywords"
+    content="田同学,Tyh,前端,前端开发,组件库,vue3组件库,vue,vuejs,javascript,typescript,vite,css3,css,html,html5,js,ts,scss,sass,fighting-design,fighting,design,setup,eslint,es6,rollup,components,vitepress,vitest,element,element-ui,ui,element-plus,go,golang,web-components,web,jquery,less,eslint" />
+  <meta name="description"
+    content="田同学的个人网站首页。我是一个前端开发者，位于中国杭州。我在 JavaScript 方面有扎实的基础。熟练使用Vue、React 和 Nest开发框架。希望参与一些远程开源工作。我希望有机会见到埃隆·马斯克。我希望将来能拥有自己的特斯拉" />
+  <mate name="author" content="https://github.com/Tyh2001" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>下拉刷新效果</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-    }
-
-    .content {
-      padding: 20px;
-      transition: transform 0.3s;
-    }
-
-    .refresh {
-      position: absolute;
-      top: -150px;
-      left: 0;
-      width: 100%;
-      height: 150px;
-      background-color: blue;
-      color: white;
-      text-align: center;
-      line-height: 50px;
-      transition: top 0.3s;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .refresh.show {
-      top: 0;
-    }
-
-    .wrapper {
-      width: 100vw;
-      height: 100vh;
-      position: fixed;
-      top: 0;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      overflow-y: auto;
-    }
-
-    .bar {
-      position: fixed;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      height: 80px;
-      color: #fff;
-      background-color: red;
-    }
-  </style>
+  <link rel="icon" href="./assets/tyh2001.png">
+  <link rel="stylesheet" href="./styles/index.css">
+  <title>前端开发学习测试</title>
 </head>
 
 <body>
+  <main class="main">
+    <!-- 菜单栏 -->
+    <nav class="nav">
+      <!-- 头像 -->
+      <img class="nav-avatar" src="https://avatars.githubusercontent.com/u/73180970?v=4" alt="田同学 - 位于中国杭州的开发者" />
 
-  <div class="wrapper">
-    <div class="refresh" id="refresh">这是一段文案</div>
-    <div class="content" id="content">
-      <h1>1212121</h1>
-      <h1>1212121</h1>
-      <div>
-        <img style="width: 100%;" src="https://htx.d3v3h3.com/assets/images/41.png" />
-      </div>
-      <h1>1212121</h1>
-      <h1>1212121</h1>
-      <h1>1212121</h1>
-      <h1>1212121</h1>
-      <h1>1212121</h1>
-      <h1>1212121</h1>
+      <ul class="nav-list">
+        <!-- blog -->
+        <li class="nav-item">
+          <a href="https://blog.tianyuhao.cn" title="访问田同学博客，记录前端各种领域知识点，以及田同学文章和里程碑" target="_blank">Blog</a>
+        </li>
+
+        <!-- 掘金 -->
+        <li class="nav-item">
+          <a href="https://juejin.cn/user/2243446742456888/posts" title="田同学掘金首页，可查看我以往发布前端技术文章和年度总结等" target="_blank">
+            Juejin
+          </a>
+        </li>
+
+        <!-- 简历 -->
+        <li class="nav-item">
+          <a href="https://drive.google.com/file/d/18n_jwkd_ZnOl3H7ZDtsEaaBsAENDrgfE/view?usp=drive_link"
+            title="田同学简历，有工作机会可以和我联系" target="_blank">
+            Resume
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <h1 class="title">Hi, I’m YuHao Tian</h1>
+
+    <p class="text">I am a developer, located in Hangzhou China. I have a solid foundation in JavaScript. I am
+      proficient in
+      using <a href="https://github.com/vuejs/core" title="Vue.js是一款渐进式JavaScript框架，用于构建用户界面，易于学习和集成"
+        target="_blank">Vue</a>、<a href="https://github.com/facebook/react"
+        title="React是由Facebook开发的JavaScript库，用于构建交互式用户界面，采用组件化开发思想" target="_blank">React</a> and <a
+        href="https://github.com/nestjs/nest"
+        title="Nest.js是一个基于Node.js的后端框架，使用TypeScript构建，具有模块化、可扩展和注重可维护性的特点，适用于构建可伸缩的服务器端应用" target="_blank">Nest</a>
+      development
+      frameworks.</p>
+    <p class="text">I hope to participate in some remote open source work.</p>
+    <p class="text">I hope to have the opportunity to meet <a href="https://twitter.com/elonmusk"
+        title="埃隆·马斯克（Elon Musk）是一位企业家、工程师和创新者，以创办和领导特斯拉（Tesla）、SpaceX等科技公司而闻名，致力于推动电动汽车、太空探索和可再生能源等领域的发展"
+        target="_blank">Elon
+        Musk</a>.</p>
+    <p class="text">I hope to have my own <a href="https://www.tesla.com/" target="_blank"
+        title="纯电动车、太阳能和清洁能源 | 特斯拉中国">Tesla</a> in the future.</p>
+    <p class="text">My girl: <a href="https://github.com/Fightingweiwei" title="我的女孩 Fighting 维"
+        target="_blank">Fighting 维~</a></p>
+
+    <div class="link-list">
+      <!-- github -->
+      <a href="https://github.com/Tyh2001" title="访问田同学 Github，可以查看田同学开源项目" target="_blank">
+        <div class="link-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="31" height="32" viewBox="0 0 496 512">
+            <path fill="currentColor"
+              d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6c-3.3.3-5.6-1.3-5.6-3.6c0-2 2.3-3.6 5.2-3.6c3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9c2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9c.3 2 2.9 3.3 5.9 2.6c2.9-.7 4.9-2.6 4.6-4.6c-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2c12.8 2.3 17.3-5.6 17.3-12.1c0-6.2-.3-40.4-.3-61.4c0 0-70 15-84.7-29.8c0 0-11.4-29.1-27.8-36.6c0 0-22.9-15.7 1.6-15.4c0 0 24.9 2 38.6 25.8c21.9 38.6 58.6 27.5 72.9 20.9c2.3-16 8.8-27.1 16-33.7c-55.9-6.2-112.3-14.3-112.3-110.5c0-27.5 7.6-41.3 23.6-58.9c-2.6-6.5-11.1-33.3 2.6-67.9c20.9-6.5 69 27 69 27c20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27c13.7 34.7 5.2 61.4 2.6 67.9c16 17.7 25.8 31.5 25.8 58.9c0 96.5-58.9 104.2-114.8 110.5c9.2 7.9 17 22.9 17 46.4c0 33.7-.3 75.4-.3 83.6c0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252C496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2c1.6 1.6 3.9 2.3 5.2 1c1.3-1 1-3.3-.7-5.2c-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9c1.6 1 3.6.7 4.3-.7c.7-1.3-.3-2.9-2.3-3.9c-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2c2.3 2.3 5.2 2.6 6.5 1c1.3-1.3.7-4.3-1.3-6.2c-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9c1.6 2.3 4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2c-1.4-2.3-4-3.3-5.6-2" />
+          </svg>
+          <div class="link-button-title">Github</div>
+        </div>
+      </a>
+
+      <!-- 雇用我 -->
+      <a href="mailto:tyhabcde@gmail.com" title="发送邮件联系我 tyhabcde@gmail.com | 1469442737@qq.com" target="_blank">
+        <div class="link-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm-2 0l-8 4.99L4 6zm0 12H4V8l8 5l8-5z" />
+          </svg>
+          <div class="link-button-title">Hire me!</div>
+        </div>
+      </a>
+
+      <!-- blog -->
+      <a href="https://blog.tianyuhao.cn/" title="访问田同学博客，记录前端各种领域知识点，以及田同学文章和里程碑" target="_blank">
+        <div class="link-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-5 14H7v-2h7zm3-4H7v-2h10zm0-4H7V7h10z" />
+          </svg>
+          <div class="link-button-title">Blog</div>
+        </div>
+      </a>
+
+      <!-- 𝕏 -->
+      <a href="https://twitter.com/tyh20011" title="访问田同学 𝕏，可以查看田同学更多内容" target="_blank">
+        <div class="link-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512">
+            <path fill="currentColor"
+              d="M389.2 48h70.6L305.6 224.2L487 464H345L233.7 318.6L106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9zm-24.8 373.8h39.1L151.1 88h-42z" />
+          </svg>
+        </div>
+      </a>
     </div>
-  </div>
-  <div class="bar">这是导航条</div>
 
+    <p class="footer">
+      <a href="https://beian.miit.gov.cn/" target="_blank">浙ICP备2021024540号-2</a>
+    </p>
+  </main>
+
+  <script src="./scrtpt/index.js"></script>
   <script>
-    let startY;
-    let isPullingDown = false;
-    const refresh = document.getElementById('refresh');
-    const content = document.getElementById('content');
-    const wrapper = document.querySelector('.wrapper');
-
-    wrapper.addEventListener('touchstart', (e) => {
-      console.log('touchstart event on wrapper', e);
-      if (wrapper.scrollTop === 0) {
-        startY = e.touches[0].pageY;
-        isPullingDown = true;
-      }
-    }, { passive: false });
-
-    wrapper.addEventListener('touchmove', (e) => {
-      console.log('touchmove event on wrapper', e);
-      if (isPullingDown) {
-        let moveY = e.touches[0].pageY;
-        if (moveY - startY > 50) {
-          e.preventDefault();
-          refresh.classList.add('show');
-          content.style.transform = 'translateY(150px)';
-        }
-      }
-    }, { passive: false });
-
-    wrapper.addEventListener('touchend', (e) => {
-      console.log('touchend event on wrapper', e);
-      if (refresh.classList.contains('show')) {
-        refresh.classList.remove('show');
-        content.style.transform = 'translateY(0)';
-        // 可以在这里添加刷新内容的逻辑
-      }
-      isPullingDown = false;
-    }, { passive: false });
-
-    // For debugging purposes
-    window.addEventListener('touchstart', (e) => {
-      console.log('touchstart event on window', e);
-      // e.preventDefault()
-    }, { passive: false });
+    document.body.addEventListener('touchmove', (e) => {
+      e.preventDefault()
+    }, {
+      passive: false
+    })
   </script>
-
 </body>
 
 </html>
