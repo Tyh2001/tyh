@@ -49,17 +49,23 @@ export const Home = () => {
       <div className='flex flex-col flex-1 justify-between'>
         {/* 我的信息 */}
         <div className=''>
-          <img className=' w-[188px] h-[188px] rounded-full' src={avatar} alt="My avatar" />
-          <div className=' text-[44px] font-bold'>Yuhao Tian</div>
-          <div>{calculateAge('2001-09-17')},</div>
-          <div>I am a developer,</div>
-          <div>form HangZhou,China.</div>
+          <img className='w-[188px] h-[188px] rounded-full' src={avatar} alt="My avatar" />
+          <div className='text-[44px] font-bold'>Yuhao Tian</div>
+          <div className='text-[#565656] text-[21px]'>{calculateAge('2001-09-17')},</div>
+          <div className='text-[#565656] text-[21px]'>I am a developer,</div>
+          <div className='text-[#565656] text-[21px]'>form HangZhou,China.</div>
         </div>
 
         {/* 底部第三方链接 */}
-        <div className='flex items-center'>
-          <div className='cursor-pointer bg-[#e350af] w-[190px] h-[70px] rounded-[26px] flex justify-center items-center text-[#fff] text-[18px] font-bold'>
-            <i className=' text-[20px]'>
+        <div className='flex space-x-3 items-start'>
+          {/* 雇佣我 */}
+          <a href="mailto:tyhabcde@gmail.com" title="Send an email to contact me: tyhabcde@gmail.com | 1469442737@qq.com" target="_blank">
+            <div className="cursor-pointer bg-[#508be3] px-[25px] box-border h-[50px] rounded-[45px] flex justify-center items-center text-[#fff] text-[15px] font-bold">Hire me!</div>
+          </a>
+
+          {/* 赞助我 */}
+          <div className='cursor-pointer bg-[#e350af] px-[25px] box-border h-[50px] rounded-[45px] flex justify-center items-center text-[#fff] text-[15px] font-bold'>
+            <i className='text-[20px]'>
               <SponsorIcon />
             </i>
             Sponsor me
@@ -76,10 +82,10 @@ export const Home = () => {
           <div className='flex flex-col space-y-7'>
             <div className='flex items-center space-x-3'>
               <img src={cityWalk} className='w-[80px] h-[80px] rounded-[20px]' />
-              <div className=' font-bold text-[23px]'>City Walk App</div>
+              <div className='font-bold text-[23px]'>City Walk App</div>
             </div>
 
-            <div className=' text-[17px]'>Record every place you have walked.</div>
+            <div className='text-[17px]'>Record every place you have walked.</div>
           </div>
 
           <div className='flex justify-end'>
@@ -91,10 +97,10 @@ export const Home = () => {
           <div className='flex flex-col space-y-7'>
             <div className='flex items-center space-x-3'>
               <img src={fightingDesign} className='w-[80px] h-[80px] rounded-[20px]' />
-              <div className=' font-bold text-[23px]'>Fighting Design</div>
+              <div className='font-bold text-[23px]'>Fighting Design</div>
             </div>
 
-            <div className=' text-[17px]'>Fighting design can quickly build interactive interfaces in vue3 applications, which looks good.</div>
+            <div className='text-[17px]'>Fighting design can quickly build interactive interfaces in vue3 applications, which looks good.</div>
           </div>
 
           <div className='flex justify-end'>
@@ -104,7 +110,7 @@ export const Home = () => {
       </div>
 
       {/* 社交列表 */}
-      <div className=' flex flex-col space-y-3'>
+      <div className='flex flex-col space-y-3'>
         <div className='text-[#333] text-[38px] font-bold'>Social</div>
         <div className='flex space-x-3'>
           {
@@ -124,9 +130,9 @@ export const Home = () => {
       </div>
 
       {/* 技能列表 */}
-      <div className=' flex flex-col space-y-3'>
+      <div className='flex flex-col space-y-3'>
         <div className='text-[#333] text-[38px] font-bold'>Skills</div>
-        <img src="https://skillicons.dev/icons?i=js,html,css,ts,swift,nodejs,nest,vue,react,md,mysql,npm,pnpm,postman,vitest,ps,github,figma&perline=8" alt="My skills" />
+        <img src="https://skillicons.dev/icons?i=react,vue,ts,js,swift,html,css,nodejs,nest,pinia,vite,vitest,tailwind,less,bootstrap,jquery,md,mysql,webpack,apple,windows,linux,npm,pnpm,git,gmail,postman,vscode,ps,pr,stackoverflow,github,twitter,instagram,figma&perline=8" alt="My skills" />
       </div>
 
       {/* 希望 */}
@@ -145,9 +151,9 @@ export const Home = () => {
           <source src="https://digitalassets.tesla.com/tesla-contents/video/upload/f_auto,q_auto:best/Model-3-Performance-End-of-Page-Desktop-LHD.mp4" type="video/mp4" />
         </video>
 
-        <div className=' absolute bottom-0 right-0 left-0 h-[80px] rounded-b-[20px] flex items-center px-[32px]'>
+        <div className='absolute bottom-0 right-0 left-0 h-[80px] rounded-b-[20px] flex items-center px-[32px]'>
           <div className='ground-glass w-full h-full absolute inset-0 rounded-b-[20px]'></div>
-          <div className=' text-[20px] text-[#fff] font-bold relative'>
+          <div className='text-[20px] text-[#fff] font-bold relative'>
             I hope to have my own Tesla.
           </div>
         </div>
@@ -181,7 +187,7 @@ export const Home = () => {
         </div>
       </div>
 
-      <div className=' pt-[180px] pb-[50px]'>
+      <div className='pt-[180px] pb-[50px]'>
         <a className='text-[#333] text-[13px]' href="https://beian.miit.gov.cn" target="_blank">浙ICP备2021024540号-2</a>
       </div>
     </div>
