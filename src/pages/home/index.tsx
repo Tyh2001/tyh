@@ -1,8 +1,10 @@
 import avatar from '../../assets/images/avatar.jpg'
-import github from '../../assets/svg/github.svg'
-import x from '../../assets/svg/x.svg'
+// import github from '../../assets/svg/github.svg'
+// import x from '../../assets/svg/x.svg'
+import { XIcon, GithubIcon, SponsorIcon } from '../../components'
 import cityWalk from '../../assets/images/city-walk.jpg'
 import fightingDesign from '../../assets/images/fighting-design.jpg'
+// import Sponsor from '../../assets/svg/sponsor.svg'
 import './index.css'
 
 /**
@@ -13,8 +15,8 @@ export const Home = () => {
    * 社交主页
    */
   const socials = [
-    { title: 'Github', icon: github, account: '', link: 'https://github.com/Tyh2001' },
-    { title: '𝕏', icon: x, account: '@tyh20011', link: 'https://x.com/intent/user?screen_name=tyh20011' },
+    { title: 'Github', icon: GithubIcon, account: '', link: 'https://github.com/Tyh2001' },
+    { title: '𝕏', icon: XIcon, account: '@tyh20011', link: 'https://x.com/intent/user?screen_name=tyh20011' },
   ]
 
   /**
@@ -42,28 +44,33 @@ export const Home = () => {
     return age
   }
 
-  return <div className=" p-16 h-screen bg-[#fff] relative flex overflow-y-auto">
+  return <div className=" p-16 h-screen bg-[#fff] relative flex overflow-y-auto justify-between">
     {/* 左侧部分 */}
-    <div className='flex-auto flex sticky top-0'>
+    <div className='flex sticky top-0 min-w-[420px]'>
       <div className='flex flex-col flex-1 justify-between'>
         {/* 我的信息 */}
-        <div className=' h-full'>
+        <div className=''>
           <img className=' w-[188px] h-[188px] rounded-full' src={avatar} alt="My avatar" />
           <div className=' text-[44px] font-bold'>Yuhao Tian</div>
           <div>{calculateAge('2001-09-17')},</div>
+          <div>I am a developer,</div>
           <div>form HangZhou,China.</div>
-          <div>I am a developer</div>
         </div>
 
         {/* 底部第三方链接 */}
         <div className='flex items-center'>
-          <div className='cursor-pointer bg-[#e350af] w-[190px] h-[70px] rounded-[26px] flex justify-center items-center text-[#fff] text-[18px] font-bold'>Sponsor me</div>
+          <div className='cursor-pointer bg-[#e350af] w-[190px] h-[70px] rounded-[26px] flex justify-center items-center text-[#fff] text-[18px] font-bold'>
+            <i className=' text-[20px]'>
+              <SponsorIcon />
+            </i>
+            Sponsor me
+          </div>
         </div>
       </div>
     </div>
 
     {/* 右侧部分 */}
-    <div className='relative max-w-[820px] flex flex-col space-y-10'>
+    <div className='relative flex flex-col space-y-10'>
       {/* 我的项目 */}
       <div className='flex space-x-3'>
         <div className='w-[380px] h-[380px] rounded-[40px] bg-slate-200 p-[30px] box-border flex flex-col justify-between'>
@@ -105,7 +112,9 @@ export const Home = () => {
             socials.map((item, index) => {
               return <a href={item.link} key={index} target="_blank" className='shrink-on-click transition-transform duration-200 flex bg-[#eee] w-[180px] h-[180px] rounded-[40px] p-[24px] flex-col justify-between'>
                 <div>
-                  <img src={item.icon} className='w-[55px] h-[55px]' />
+                  <i>
+                    <item.icon />
+                  </i>
                   <div>{item.title}</div>
                 </div>
                 <div>{item.account}</div>
@@ -118,12 +127,11 @@ export const Home = () => {
       {/* 技能列表 */}
       <div className=' flex flex-col space-y-3'>
         <div className='text-[#333] text-[38px] font-bold'>Skills</div>
-        <img src="https://skillicons.dev/icons?i=js,html,css,ts,swift,nodejs,nest,vue,react,md,mysql,npm,pnpm,postman,vitest,ps,github,figma" alt="" />
+        <img src="https://skillicons.dev/icons?i=js,html,css,ts,swift,nodejs,nest,vue,react,md,mysql,npm,pnpm,postman,vitest,ps,github,figma&perline=8" alt="My skills" />
       </div>
 
-
       {/* 希望 */}
-      <div className=' flex flex-col space-y-3'>
+      <div className='flex flex-col space-y-3'>
         <div className='text-[#333] text-[38px] font-bold'>Hopes</div>
       </div>
     </div>
