@@ -1,7 +1,9 @@
-import avatar from '../../assets/images/avatar.jpg'
-import { XIcon, GithubIcon, SponsorIcon } from '../../components'
-import cityWalk from '../../assets/images/city-walk.jpg'
-import fightingDesign from '../../assets/images/fighting-design.jpg'
+import avatar from '@/assets/images/avatar.jpg'
+import { XIcon, GithubIcon, SponsorIcon } from '@/components'
+import cityWalk from '@/assets/images/city-walk.jpg'
+import fightingDesign from '@/assets/images/fighting-design.jpg'
+import elonmusk from '@/assets/images/elonmusk.jpg'
+import wei from '@/assets/images/wei.jpg'
 import './index.css'
 
 /**
@@ -41,7 +43,7 @@ export const Home = () => {
     return age
   }
 
-  return <div className=" p-16 h-screen bg-[#fff] relative flex overflow-y-auto justify-between">
+  return <div className="home p-16 h-screen bg-[#fff] relative flex overflow-y-auto justify-between">
     {/* 左侧部分 */}
     <div className='flex sticky top-0 min-w-[420px]'>
       <div className='flex flex-col flex-1 justify-between'>
@@ -107,7 +109,7 @@ export const Home = () => {
         <div className='flex space-x-3'>
           {
             socials.map((item, index) => {
-              return <a href={item.link} key={index} target="_blank" className='shrink-on-click transition-transform duration-200 flex bg-[#eee] w-[180px] h-[180px] rounded-[40px] p-[24px] flex-col justify-between'>
+              return <a href={item.link} key={index} target="_blank" className='card-handle-click transition-transform duration-200 flex bg-[#eee] w-[180px] h-[180px] rounded-[40px] p-[24px] flex-col justify-between'>
                 <div>
                   <i>
                     <item.icon />
@@ -133,11 +135,9 @@ export const Home = () => {
       </div>
 
       {/* tesla */}
-      <div className=' w-[600px] h-[400px] relative rounded-[20px]'>
+      <div className='w-[600px] relative rounded-[20px]'>
         <video
-          width="600"
-          height="100"
-          className=' rounded-[20px]'
+          className='rounded-[20px]'
           autoPlay
           loop
           muted
@@ -145,15 +145,44 @@ export const Home = () => {
           <source src="https://digitalassets.tesla.com/tesla-contents/video/upload/f_auto,q_auto:best/Model-3-Performance-End-of-Page-Desktop-LHD.mp4" type="video/mp4" />
         </video>
 
-        <div className=' absolute bottom-0 right-0 left-0 h-[50px] bg-red-300 rounded-b-[20px] flex items-center p-[12px]'>
-          <div className=' text-[20px] text-[#fff] font-bold'>
-            I hope to have my own Tesla
+        <div className=' absolute bottom-0 right-0 left-0 h-[80px] rounded-b-[20px] flex items-center px-[32px]'>
+          <div className='ground-glass w-full h-full absolute inset-0 rounded-b-[20px]'></div>
+          <div className=' text-[20px] text-[#fff] font-bold relative'>
+            I hope to have my own Tesla.
           </div>
         </div>
       </div>
 
-      <div>
-        <a href="https://beian.miit.gov.cn" target="_blank">浙ICP备2021024540号-2</a>
+      {/* 自由的开发者 & 马斯克 */}
+      <div className='flex items-center space-x-6'>
+        <div className='h-[290px] flex-1 bg-[#eee] rounded-[28px] p-[35px] box-border flex flex-col justify-between'>
+          <div className='text-[21px] text-[#333]'>
+            I hope to become a free developer and travel the world with my wife.
+          </div>
+
+          <div className='flex justify-between items-end'>
+            <div className='text-[21px] w-[110px] h-[60px] bg-[#7d2a2a] rounded-[40px] flex items-center justify-center font-bold text-[#fff] cursor-pointer'>view</div>
+            <a href="https://github.com/Fightingweiwei" target="_blank">
+              <img src={wei} className='w-[120px] h-[120px] rounded-[90px]' alt="My wife" />
+            </a>
+          </div>
+        </div>
+        <div className='h-[290px] flex-1 bg-[#eee] rounded-[28px] p-[35px] box-border flex flex-col justify-between'>
+          <div className='text-[21px] text-[#333]'>
+            I hope to have the opportunity to meet Elon Musk.
+          </div>
+
+          <div className='flex justify-between items-end'>
+            <div className='text-[50px]'>👉</div>
+            <a href="https://x.com/elonmusk" target="_blank">
+              <img src={elonmusk} className='w-[120px] h-[120px] rounded-[90px]' alt="Elon Musk" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div className=' pt-[180px] pb-[50px]'>
+        <a className='text-[#333] text-[13px]' href="https://beian.miit.gov.cn" target="_blank">浙ICP备2021024540号-2</a>
       </div>
     </div>
   </div>

@@ -1,3 +1,8 @@
-.shrink-on-click:active {
+.home .card-handle-click:active {
   transform: scale(0.9);
+}
+
+/* 毛玻璃 */
+.home .ground-glass {
+  backdrop-filter: blur(65px);
 }
