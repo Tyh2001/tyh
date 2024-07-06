@@ -1,10 +1,7 @@
 import avatar from '../../assets/images/avatar.jpg'
-// import github from '../../assets/svg/github.svg'
-// import x from '../../assets/svg/x.svg'
 import { XIcon, GithubIcon, SponsorIcon } from '../../components'
 import cityWalk from '../../assets/images/city-walk.jpg'
 import fightingDesign from '../../assets/images/fighting-design.jpg'
-// import Sponsor from '../../assets/svg/sponsor.svg'
 import './index.css'
 
 /**
@@ -133,6 +130,30 @@ export const Home = () => {
       {/* 希望 */}
       <div className='flex flex-col space-y-3'>
         <div className='text-[#333] text-[38px] font-bold'>Hopes</div>
+      </div>
+
+      {/* tesla */}
+      <div className=' w-[600px] h-[400px] relative rounded-[20px]'>
+        <video
+          width="600"
+          height="100"
+          className=' rounded-[20px]'
+          autoPlay
+          loop
+          muted
+        >
+          <source src="https://digitalassets.tesla.com/tesla-contents/video/upload/f_auto,q_auto:best/Model-3-Performance-End-of-Page-Desktop-LHD.mp4" type="video/mp4" />
+        </video>
+
+        <div className=' absolute bottom-0 right-0 left-0 h-[50px] bg-red-300 rounded-b-[20px] flex items-center p-[12px]'>
+          <div className=' text-[20px] text-[#fff] font-bold'>
+            I hope to have my own Tesla
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <a href="https://beian.miit.gov.cn" target="_blank">浙ICP备2021024540号-2</a>
       </div>
     </div>
   </div>
