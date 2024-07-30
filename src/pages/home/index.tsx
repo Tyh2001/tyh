@@ -130,10 +130,10 @@ export const Home = () => {
       </div>
 
       {/* 技能列表 */}
-      <div className='flex flex-col space-y-3'>
+     {/*  <div className='flex flex-col space-y-3'>
         <div className='text-[#333] text-[38px] font-bold'>Skills</div>
         <img src="https://skillicons.dev/icons?i=react,vue,ts,js,swift,html,css,nodejs,nest,pinia,vite,vitest,tailwind,less,bootstrap,jquery,md,mysql,webpack,apple,windows,linux,npm,pnpm,git,gmail,postman,vscode,ps,pr,stackoverflow,github,twitter,instagram,figma&perline=8" alt="My skills" />
-      </div>
+      </div>*/}
 
       {/* 希望 */}
       <div className='flex flex-col space-y-3'>
@@ -173,7 +173,7 @@ export const Home = () => {
             </a>
           </div>
         </div>
-        <div className='h-[290px] flex-1 bg-[#eee] rounded-[28px] p-[35px] box-border flex flex-col justify-between'>
+        {/* <div className='h-[290px] flex-1 bg-[#eee] rounded-[28px] p-[35px] box-border flex flex-col justify-between'>
           <div className='text-[21px] text-[#333]'>
             I hope to have the opportunity to meet Elon Musk.
           </div>
@@ -184,7 +184,7 @@ export const Home = () => {
               <img src={elonmusk} className='w-[120px] h-[120px] rounded-[90px]' alt="Elon Musk" />
             </a>
           </div>
-        </div>
+        </div> */}
       </div>
 
       <div className='pt-[180px] pb-[50px]'>
